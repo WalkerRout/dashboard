@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashboard-config
+data:
+  settings.yaml: |
+    title: Homelab Dashboard
+    favicon: https://github.com/walkxcode/dashboard-icons/blob/main/png/heimdall.png?raw=true
+    headerStyle: boxed
+    layout:
+      Services:
+        style: row
+        columns: 2
+
+  services.yaml: |
+    - Services:
+        - Counter:
+            href: https://counter.walkerrout.ca
+            description: Counter application
+            icon: mdi-counter
+        - Golf:
+            href: https://golf.walkerrout.ca
+            description: Portfolio website
+            icon: mdi-golf
+        - Traefik:
+            href: http://traefik.infrastructure.svc.cluster.local:8080
+            description: Ingress controller dashboard
+            icon: traefik
+
+  bookmarks.yaml: |
+    - Developer:
+        - GitHub:
+            - abbr: GH
+              href: https://github.com
+
+  widgets.yaml: |
+    - search:
+        provider: google
+        target: _blank
