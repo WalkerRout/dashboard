@@ -14,22 +14,26 @@ data:
 
   services.yaml: |
     - Services:
+        - Counter:
+            href: https://counter.walkerrout.ca
+            description: Counter application
+            icon: mdi-counter
         - Golf:
             href: https://walkerrout.ca
             description: Portfolio website
             icon: mdi-golf
-        - Counter:
-            href: https://counter.walkerrout.ca
-            description: Poker tracker
-            icon: mdi-counter
+        - Traefik:
+            href: http://traefik.infrastructure.svc.cluster.local:8080
+            description: Ingress controller dashboard
+            icon: traefik
 
-#  bookmarks.yaml: |
-#    - Developer:
-#        - GitHub:
-#            - abbr: GH
-#              href: https://github.com
+  bookmarks.yaml: |
+    - Developer:
+        - GitHub:
+            - abbr: GH
+              href: https://github.com
 
-#  widgets.yaml: |
-#    - search:
-#        provider: google
-#        target: _blank
+  widgets.yaml: |
+    - search:
+        provider: google
+        target: _blank
