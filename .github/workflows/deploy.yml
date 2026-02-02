@@ -16,7 +16,7 @@ jobs:
       - name: apply secrets
         run: |
           kubectl create secret generic dashboard-auth \
-            --from-literal=users=${{ secrets.HTPASSWD }} \
+            --from-literal=users='${{ secrets.HTPASSWD }}' \
             --dry-run=client -o yaml | kubectl apply -f -
 
       - name: deploy
